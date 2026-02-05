@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ✅ YES nur einmal pro Hover vergrößern + Herz-Animation
     if (!yesHoverTriggered) {
-      yesScale += 0.3; // YES leicht größer
+      yesScale += 0.5; // YES leicht größer
       yesButton.style.transform = `scale(${yesScale})`;
 
       // Herz-Animation starten

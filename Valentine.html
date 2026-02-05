@@ -64,7 +64,7 @@
 
 
 .buttons {
-margin-top: 70px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -84,12 +84,32 @@ margin-top: 70px;
   border: none;
   font-size: 20px;
   cursor: pointer;
-  transition: transform 0.20s ease;
-  transform-origin: center center; /* 👈 extrem wichtig */
+  transition: none;
+  transform-origin:  center; /* 👈 extrem wichtig */
   position: relative;
   z-index: 10;
   
   
+}
+
+/* ❤️ Herz-Icon */
+.Yes-Button .heart {
+  display: inline-block;
+  font-size: 22px;
+  transform-origin: center;
+}
+
+/* 💓 Herz pulsiert leicht mit */
+.Yes-Button.heart-grow .heart {
+  animation: heartPulse 0.8s ease-in-out;
+}
+
+/* 💗 Herz-Animation */
+@keyframes heartPulse {
+  25%  { transform: scale(1.2); }
+50%  { transform: scale(1.35); }
+75%  { transform: scale(1.2); }
+
 }
 
 .No-Button {
@@ -119,6 +139,8 @@ margin-top: 70px;
   }
 }
 
+}
+
 .tenor-gif-embed {
   width: 100px;       /* Breite wie dein altes Logo */
   max-width: 100%;    /* Nicht größer als Container */
@@ -136,12 +158,36 @@ margin-top: 70px;
 }
 
   
-}
     
     #tenorGifContainer2 {
   width: 200px;
   margin: -20px auto 0; /* leicht nach oben */
+
+  
 }
+.sub-text {
+  font-size: 9px;
+  opacity: 0.4;
+  margin-top: 18px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+/* 💓 Herzschlag-Animation für YES */
+@keyframes heartPulse {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.15); }
+  50%  { transform: scale(1.25); }
+  75%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+
+/* Wird per JavaScript hinzugefügt */
+.heart-grow {
+  animation: heartBeat 0.5s ease;
+}
+
 </style>
 </head>
   <body>
@@ -162,7 +208,10 @@ margin-top: 70px;
     
         <!-- Buttons -->
         <div class="buttons">
-          <button class="Yes-Button">YES</button>
+          <button class="Yes-Button">
+            <span class="heart">❤️</span>
+            YES
+          </button>
           <button class="No-Button">NO</button>
         </div>
       </div>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will you be my Valentine?</title>
+<style>
+    html, body {
+  height: 100%;
+  margin: 0;
+  background-color: pink;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertikal */
+  height: 100%;
+}
+
+.card {
+  max-width: 600px;
+  font-size: 30px;
+  font-weight: 600;
+  background: #fff;
+  padding: 100px;      /* verringert, nicht 150px */
+  padding-top: 125px;  /* etwas Abstand oben */
+  border-radius: 18px;
+  box-shadow: 0px 20px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;           /* Abstand zwischen GIF/Text/Buttons */
+  min-height: 300px;   /* Wichtig: Card zieht nicht zusammen */
+  
+}
+
+.logo-gif {
+  width: 200px;        /* GIF Größe */
+  margin: -30px auto 20px;
+}
+
+
+.card-text {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+  
+
+    
+    .logo {
+        width: 20px;
+        height: auto;
+        background-color: #ffffff;
+        width: 100px;          /* Größe des Logos */
+        margin: 0 auto 20px;  /* zentrieren + Abstand nach unten */
+        display: block;
+    }
+    
+
+
+.buttons {
+margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+
+  
+  
+}
+
+.Yes-Button {
+  background: rgb(248, 0, 124);
+  color: white;
+  padding: 16px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.20s ease;
+  transform-origin: center center; /* 👈 extrem wichtig */
+  position: relative;
+  z-index: 10;
+  
+  
+}
+
+.No-Button {
+  background: #eee;
+  padding: 16px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1;
+
+  
+}
+.no-placeholder {
+  visibility: hidden;
+
+
+  .fade-out {
+  animation: fadeOut 0.6s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.tenor-gif-embed {
+  width: 100px;       /* Breite wie dein altes Logo */
+  max-width: 100%;    /* Nicht größer als Container */
+  margin: 0 auto 20px; /* zentrieren + Abstand nach unten */
+}
+
+
+  
+.sub-text {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 5px;
+  color: #333;
+}
+
+  
+}
+    
+    #tenorGifContainer2 {
+  width: 200px;
+  margin: -20px auto 0; /* leicht nach oben */
+}
+</style>
+</head>
+  <body>
+    
+    <div class="container" id="mainContainer">
+      <div class="card">
+        <!-- GIF Container -->
+        <div class="logo-gif">
+          <div class="tenor-gif-embed" data-postid="10586631440146974859" data-share-method="host" data-aspect-ratio="0.935743" data-width="100%">
+            <a href="https://tenor.com/view/minion-minion-loves-loves-love-i-love-you-gif-10586631440146974859">Minion Minion Loves GIF</a>
+            from <a href="https://tenor.com/search/minion-gifs">Minion GIFs</a>
+          </div>
+          <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+    
+        <!-- Text -->
+        <p class="card-text">Yohanna, will you be my Valentine?</p>
+    
+        <!-- Buttons -->
+        <div class="buttons">
+          <button class="Yes-Button">YES</button>
+          <button class="No-Button">NO</button>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      
+        
+        
+        <script src="script.js"></script>
+    
+    
+    
+   
+  </body>
+</html>
